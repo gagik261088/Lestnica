@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изготовление лестниц | Столяр-мастер</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #faf8f5;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4b68a;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #5a3e2b;
+        }
+        .logo span { color: #b8864b; }
+        .contacts-header a {
+            text-decoration: none;
+            color: #2c2c2c;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+        .contacts-header a:hover { color: #b8864b; }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 40px 0;
+            align-items: center;
+        }
+        .hero-text { flex: 1; }
+        .hero-text h1 {
+            font-size: 42px;
+            color: #3d2a1a;
+            margin-bottom: 20px;
+        }
+        .hero-text h1 span { color: #b8864b; }
+        .hero-text p { 
+            font-size: 18px; 
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .hero-image { 
+            flex: 1; 
+            background: #d9c5b0;
+            height: 300px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: #8b6b4e;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .feature-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+        }
+        .feature-item .icon { font-size: 40px; margin-bottom: 10px; }
+        .messenger-section {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+            margin: 50px 0;
+            border: 1px solid #e8ddd0;
+            text-align: center;
+        }
+        .messenger-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #3d2a1a;
+        }
+        .messenger-section p { 
+            color: #666; 
+            margin-bottom: 30px;
+        }
+        .messenger-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .btn-messenger {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+            transition: 0.3s;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-messenger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        .btn-whatsapp { background: #25D366; }
+        .btn-whatsapp:hover { background: #1da851; }
+        .btn-telegram { background: #0088cc; }
+        .btn-telegram:hover { background: #006699; }
+        .btn-vk { background: #4a76a8; }
+        .btn-vk:hover { background: #3a5f8a; }
+        .btn-phone { background: #34a853; }
+        .btn-phone:hover { background: #2d8f47; }
+        .btn-avito { background: #00bf5e; }
+        .btn-avito:hover { background: #00994d; }
+        .btn-max { background: #6c5ce7; }
+        .btn-max:hover { background: #5a4bd1; }
+        .btn-icon { font-size: 28px; }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #888;
+            border-top: 1px solid #e0d6c8;
+            margin-top: 30px;
+        }
+        @media (max-width: 700px) {
+            .hero-text h1 { font-size: 30px; }
+            .messenger-section { padding: 25px; }
+            .contacts-header a { display: block; margin: 5px 0; }
+            .btn-messenger { 
+                width: 100%; 
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 16px;
+            }
+            .messenger-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🪚 <span>Лестницы</span>Мастер</div>
+            <div class="contacts-header">
+                <a href="tel:+79303427625">📞 +7 (930) 342-76-25</a>
+                <a href="https://vk.com/torosyan_wood" target="_blank">📱 ВКонтакте</a>
+            </div>
+        </header>
+
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Лестницы из массива <span>с душой</span></h1>
+                <p>Изготовление и установка деревянных лестниц на заказ. Работаю с дубом, ясенем, буком и сосной. Выезд на замер — бесплатно.</p>
+                <p>✅ Гарантия 5 лет. ✅ Собственное производство. ✅ Любые конфигурации.</p>
+            </div>
+            <div class="hero-image">
+                🪜 Здесь будет ваше фото лестницы
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-item"><div class="icon">📏</div><h3>Точный замер</h3><p>Выезжаю на объект, делаю 3D-проект</p></div>
+            <div class="feature-item"><div class="icon">🪵</div><h3>Своя столярка</h3><p>Контроль качества на каждом этапе</p></div>
+            <div class="feature-item"><div class="icon">🚚</div><h3>Доставка и монтаж</h3><p>Привезу и установлю под ключ</p></div>
+        </div>
+
+        <div class="messenger-section">
+            <h2>📲 Свяжитесь со мной за 1 секунду</h2>
+            <p>Нажмите на удобный мессенджер — и сразу напишите мне. Отвечаю быстро!</p>
+            <div class="messenger-grid">
+                <a href="https://wa.me/89303427625?text=Здравствуйте!%20Хочу%20заказать%20лестницу." class="btn-messenger btn-whatsapp" target="_blank">
+                    <span class="btn-icon">💬</span> WhatsApp
+                </a>
+                <a href="https://t.me/Gagik_Tor" class="btn-messenger btn-telegram" target="_blank">
+                    <span class="btn-icon">✈️</span> Telegram
+                </a>
+                <a href="https://max.ru/u/f9LHodD0cOKiWTZGNwooQBhoVN4fh8gcOvQB1SlD8WpNJWb9GopuF6Ep_bc" class="btn-messenger btn-max" target="_blank">
+                    <span class="btn-icon">💎</span> MAX
+                </a>
+                <a href="https://vk.com/torosyan_wood" class="btn-messenger btn-vk" target="_blank">
+                    <span class="btn-icon">📱</span> ВКонтакте
+                </a>
+                <a href="https://www.avito.ru/ivanovo/predlozheniya_uslug/lestnitsa_3348493656?utm_campaign=native&utm_medium=item_page_ios&utm_source=soc_sharing_seller" class="btn-messenger btn-avito" target="_blank">
+                    <span class="btn-icon">📦</span> Avito
+                </a>
+                <a href="tel:89303427625" class="btn-messenger btn-phone">
+                    <span class="btn-icon">📞</span> Позвонить
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 14px; color: #999;">
+                Или просто позвоните по номеру: <strong style="color:#3d2a1a;">+7 (930) 342-76-25</strong>
+            </p>
+        </div>
+
+        <footer>
+            © 2026 ЛестницыМастер. Сделано с любовью к дереву.
+        </footer>
+    </div>
+</body>
+</html>
